@@ -1,0 +1,32 @@
+127.0.0.1	localhost
+
+# ubuntu update often shows batty behavior trying to reach
+# IPv6 locations, if it freezes this is a fix.
+91.189.91.24	us.archive.ubuntu.org
+
+# No DNS at all, keep in mind these can and do change
+# for example if a node is down its DNS names will get
+# redirected. 
+212.129.34.154   linux-cryptofree.cryptostorm.net 
+212.129.34.154   linux-cryptofree.cryptostorm.org 
+212.129.34.154   linux-cryptofree.cryptokens.ca 
+212.129.34.154   linux-cryptofree.cstorm.pw 
+212.129.34.154   linux-cryptofree.cryptostorm.nu 
+
+130.180.201.117   linux-london.cryptostorm.net 
+130.180.201.117   linux-london.cryptostorm.org 
+130.180.201.117   linux-london.cryptokens.ca 
+130.180.201.117   linux-london.cstorm.pw 
+130.180.201.117   linux-london.cryptostorm.nu 
+
+185.60.147.79   linux-switzerland.cryptostorm.net 
+185.60.147.79   linux-switzerland.cryptostorm.org 
+185.60.147.79   linux-switzerland.cryptokens.ca 
+185.60.147.79   linux-switzerland.cstorm.pw 
+185.60.147.79   linux-switzerland.cryptostorm.nu 
+
+46.165.240.174   linux-switzerland.cryptostorm.net 
+46.165.240.174   linux-switzerland.cryptostorm.org 
+46.165.240.174   linux-switzerland.cryptokens.ca 
+46.165.240.174   linux-switzerland.cstorm.pw 
+46.165.240.174   linux-switzerland.cryptostorm.nu 
