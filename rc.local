@@ -1,0 +1,59 @@
+#!/bin/bash
+/sbin/route delete default
+
+#London
+/sbin/route add -host 130.180.201.117 gw 10.0.2.2
+/sbin/route add -net 0.0.0.0/1 gw 10.33.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.33.0.1
+
+#Cryptofree
+/sbin/route add -host 212.129.34.154 gw 10.0.2.2
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 185.60.147.79 gw 10.0.2.2
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 46.165.240.174 gw 10.0.2.2
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#London
+/sbin/route add -host 130.180.201.117 gw 192.168.1.1
+/sbin/route add -net 0.0.0.0/1 gw 10.33.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.33.0.1
+
+#Cryptofree
+/sbin/route add -host 212.129.34.154 gw 192.168.1.1
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 185.60.147.79 gw 192.168.1.1
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 46.165.240.174 gw 192.168.1.1
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 46.165.240.174 gw 10.2.102.254
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+#Cryptofree
+
+/sbin/route add -host 212.129.34.154 gw 10.2.102.254
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+#Switzerland
+/sbin/route add -host 185.60.147.79 gw 10.2.102.254
+/sbin/route add -net 0.0.0.0/1 gw 10.55.0.1
+/sbin/route add -net 128.0.0.0/1 gw 10.55.0.1
+
+/usr/sbin/service tor start
