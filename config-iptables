@@ -1,0 +1,59 @@
+# this script presumes enp0s3 is connected to the outside world
+# and VPN ends up on tun0. If you're using this under VirtualBox
+# you will find the following:
+#
+# enp0s3 - first adapter, presumably connected to NAT
+# enp0s8 - host-only adapter, the 192.168.56.0/24 network
+# 
+# If you're building a seedbox using a VPS it's most likely your
+# one network interface will be eth0
+
+# start with a clean slate
+iptables -F
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+# preserve loopback function
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
+# treat host-only network as trusted
+iptables -A INPUT -i enp0s8 -j ACCEPT
+iptables -A OUTPUT -o enp0s8 -j ACCEPT
+
+# ICMP is OK
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A INPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+# DNS is acceptable
+iptables -A OUTPUT -p udp -o enp0s3 --dport 53 --sport 1:65535 -j ACCEPT
+iptables -A INPUT -p udp -i enp0s3 --sport 53 --dport 1:65535 -j ACCEPT
+
+# VPN traffic on port 443. Keep in mind you can use TCP or UDP on any
+# port with Cryptostorm
+iptables -A OUTPUT -p udp -o enp0s3 --dport 443 --sport 1:65535 -j ACCEPT
+iptables -A INPUT -p udp -i enp0s3 --sport 443 --dport 1:65535 -j ACCEPT
+
+# VPN service is wide open
+iptables -A INPUT -i tun0 -j ACCEPT
+iptables -A OUTPUT -o tun0 -j ACCEPT
+
+
+# accepted service: ssh for remote access
+iptables -A INPUT -i enp0s3 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+# accepted service: Tor (9001) and Tor directory services (9030) default ports
+iptables -A INPUT -i enp0s3 -p tcp --dport 9001 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i enp0s3 -p tcp --dport 9030 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+allow our own stuff
+iptables -A INPUT -i enp0s3 -p tcp -m state --state ESTABLISHED -j ACCEPT
+
+# you can use this from command line, if you screw up your access this portion wipes
+# the firewall config. If you're happy with your config, or at least if you didn't
+# break ssh access, you can ctrl-c during this two minutes and the changes will stick.
+sleep 120
+iptables -F
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
