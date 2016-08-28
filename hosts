@@ -1,32 +1,82 @@
+# example minimal /etc/hosts
 127.0.0.1	localhost
 
 # ubuntu update often shows batty behavior trying to reach
-# IPv6 locations, if it freezes this is a fix.
+# IPv6 locations, if it hangs during apt-get update this is a fix.
 91.189.91.24	us.archive.ubuntu.org
 
 # No DNS at all, keep in mind these can and do change
 # for example if a node is down its DNS names will get
-# redirected. 
-212.129.34.154   linux-cryptofree.cryptostorm.net 
-212.129.34.154   linux-cryptofree.cryptostorm.org 
-212.129.34.154   linux-cryptofree.cryptokens.ca 
-212.129.34.154   linux-cryptofree.cstorm.pw 
-212.129.34.154   linux-cryptofree.cryptostorm.nu 
+# redirected. This portion was created with findhosts
+# and mkhost scripts.
 
-130.180.201.117   linux-london.cryptostorm.net 
-130.180.201.117   linux-london.cryptostorm.org 
-130.180.201.117   linux-london.cryptokens.ca 
-130.180.201.117   linux-london.cstorm.pw 
-130.180.201.117   linux-london.cryptostorm.nu 
-
-185.60.147.79   linux-switzerland.cryptostorm.net 
-185.60.147.79   linux-switzerland.cryptostorm.org 
-185.60.147.79   linux-switzerland.cryptokens.ca 
-185.60.147.79   linux-switzerland.cstorm.pw 
-185.60.147.79   linux-switzerland.cryptostorm.nu 
-
-46.165.240.174   linux-switzerland.cryptostorm.net 
-46.165.240.174   linux-switzerland.cryptostorm.org 
-46.165.240.174   linux-switzerland.cryptokens.ca 
-46.165.240.174   linux-switzerland.cstorm.pw 
-46.165.240.174   linux-switzerland.cryptostorm.nu 
+ 212.129.27.79   linux-balancer.cryptostorm.net
+ 104.238.194.236   linux-balancer.cryptostorm.nu
+ 46.165.222.248   linux-balancer.cryptostorm.org
+ 212.83.177.138   linux-balancer.cstorm.pw
+ 167.114.84.133   linux-canadaeast.cryptostorm.net
+ 167.114.84.133   linux-canadaeast.cryptostorm.nu
+ 167.114.84.133   linux-canadaeast.cryptostorm.org
+ 167.114.84.133   linux-canadaeast.cstorm.pw
+ 162.221.207.229   linux-canadawest.cryptostorm.net
+ 162.221.207.229   linux-canadawest.cryptostorm.org
+ 212.129.27.79   linux-balancer.cryptostorm.net
+ 104.238.194.236   linux-balancer.cryptostorm.nu
+ 46.165.222.248   linux-balancer.cryptostorm.org
+ 212.83.177.138   linux-balancer.cstorm.pw
+ 167.114.84.133   linux-canadaeast.cryptostorm.net
+ 167.114.84.133   linux-canadaeast.cryptostorm.nu
+ 167.114.84.133   linux-canadaeast.cryptostorm.org
+ 167.114.84.133   linux-canadaeast.cstorm.pw
+ 162.221.207.229   linux-canadawest.cryptostorm.net
+ 162.221.207.229   linux-canadawest.cryptostorm.nu
+ 162.221.207.229   linux-canadawest.cryptostorm.org
+ 162.221.207.229   linux-canadawest.cstorm.pw
+ 82.103.131.173   linux-denmark.cryptostorm.net
+ 82.103.131.173   linux-denmark.cryptostorm.nu
+ 82.103.131.173   linux-denmark.cryptostorm.org
+ 82.103.131.173   linux-denmark.cstorm.pw
+ 5.101.137.252   linux-england.cryptostorm.net
+ 5.101.137.252   linux-england.cryptostorm.nu
+ 5.101.137.252   linux-england.cryptostorm.org
+ 5.101.137.252   linux-england.cstorm.pw
+ 46.165.240.174   linux-frankfurt.cryptostorm.net
+ 46.165.240.174   linux-frankfurt.cryptostorm.nu
+ 46.165.240.174   linux-frankfurt.cryptostorm.org
+ 46.165.222.248   linux-frankfurt.cstorm.pw
+ 109.71.42.163   linux-lisbon.cryptostorm.net
+ 109.71.42.163   linux-lisbon.cryptostorm.nu
+ 109.71.42.163   linux-lisbon.cryptostorm.org
+ 109.71.42.163   linux-lisbon.cstorm.pw
+ 212.129.27.79   linux-paris.cryptostorm.net
+ 212.83.177.138   linux-paris.cryptostorm.nu
+ 212.83.177.138   linux-paris.cryptostorm.org
+ 212.129.27.79   linux-paris.cstorm.pw
+ 95.141.47.59   linux-rome.cryptostorm.net
+ 95.141.47.59   linux-rome.cryptostorm.nu
+ 95.141.47.59   linux-rome.cryptostorm.org
+ 95.141.47.59   linux-rome.cstorm.pw
+ 185.60.147.79   linux-switzerland.cryptostorm.net
+ 185.60.147.79   linux-switzerland.cryptostorm.nu
+ 185.60.147.79   linux-switzerland.cryptostorm.org
+ 185.60.147.79   linux-switzerland.cstorm.pw
+ 104.238.194.236   linux-uscentral.cryptostorm.net
+ 76.164.234.12   linux-uscentral.cryptostorm.nu
+ 104.238.194.236   linux-uscentral.cryptostorm.org
+ 76.164.234.12   linux-uscentral.cstorm.pw
+ 173.234.159.236   linux-useast.cryptostorm.net
+ 173.234.159.236   linux-useast.cryptostorm.nu
+ 173.234.159.236   linux-useast.cryptostorm.org
+ 173.234.159.236   linux-useast.cstorm.pw
+ 173.234.56.116   linux-usnorth.cryptostorm.net
+ 173.234.56.116   linux-usnorth.cryptostorm.nu
+ 173.234.56.116   linux-usnorth.cryptostorm.org
+ 173.234.56.116   linux-usnorth.cstorm.pw
+ 70.32.38.68   linux-ussouth.cryptostorm.net
+ 70.32.38.68   linux-ussouth.cryptostorm.nu
+ 70.32.38.68   linux-ussouth.cryptostorm.org
+ 70.32.38.68   linux-ussouth.cstorm.pw
+ 104.238.195.140   linux-uswest.cryptostorm.net
+ 104.238.194.236   linux-uswest.cryptostorm.nu
+ 104.238.194.236   linux-uswest.cryptostorm.org
+ 76.164.234.12   linux-uswest.cstorm.pw
