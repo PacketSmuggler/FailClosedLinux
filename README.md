@@ -11,3 +11,10 @@ There are a lot of Linux distros out there and for some reason there is a lot of
 
 http://lubuntu.net
 
+There are some packages you'll need before you get started. You'll use git to pull configurations for Cryptostorm and gcc and make are required to install the VirtualBox guest utils. 
+
+apt-get install gcc
+apt-get install git
+apt-get install make
+
+
