@@ -1,0 +1,4 @@
+#!/bin/bash
+cat *ovpn | grep "linux" | awk -F " " {'print "./mkhost " $2 " >> etchosts"'} | sort | uniq > ovpns
+chmod 755 ovpns
+sh ovpns
