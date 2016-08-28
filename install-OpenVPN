@@ -1,0 +1,18 @@
+#!/bin/bash
+#https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos
+
+wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
+
+apt-key del E158C569
+
+echo "deb http://swupdate.openvpn.net/apt jessie main" > /etc/apt/sources.list.d/swupdate.openvpn.net.list
+
+apt-get update 
+
+apt-get install openvpn
+
+openvpn --version
+
+# acceptable output 2016-08-27
+#OpenVPN 2.3.12 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [EPOLL] [PKCS11] [MH] [IPv6] built on Aug 23 2016
+

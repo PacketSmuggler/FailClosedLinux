@@ -1,0 +1,18 @@
+#!/bin/bash
+#https://www.torproject.org/docs/debian.html.en
+
+echo "deb http://deb.torproject.org/torproject.org jessie main" >>/etc/apt/sources.list
+echo "deb-src http://deb.torproject.org/torproject.org jessie main" >> /etc/apt/sources.list
+
+gpg --keyserver keys.gnupg.net --recv 886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+
+apt-get update
+
+apt-get install tor
+
+tor --version
+
+#acceptable response on 2016-08-27
+#Tor version 0.2.8.7 (git-cc2f02ef17899f86).
+
