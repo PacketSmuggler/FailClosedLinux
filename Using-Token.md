@@ -1,5 +1,5 @@
 
-When you receive your token it will look something like this:
+When you receive your token it will look something like this: 
 
 EkX4T-5S6ix-AfMYC-zvFy6
 
